@@ -19,6 +19,32 @@ Untuk bisa melakukan build dan menjalankan aplikasi, ada beberapa software yang 
 * Spring Boot 1.5.7
 * Heroku
 
+Cara setup bisa dibaca di:
+
+* [Persiapan Coding Java](https://software.endy.muhardin.com/java/persiapan-coding-java/)
+* [Setup Project Spring Boot](https://software.endy.muhardin.com/java/project-bootstrap-01/)
+
+## Build and Run ##
+
+Cara menjalankan aplikasi di laptop/PC lokal:
+
+1. Buka command prompt
+2. Masuk ke folder aplikasi
+
+        cd aplikasi-kompensasi
+
+3. Jalankan aplikasi
+
+        mvn spring-boot:run
+
+4. Browse ke [http://localhost:8080/](http://localhost:8080/)
+
+## Live Demo ##
+
+Aplikasi ini dideploy secara otomatis ke Heroku dan bisa diakses di:
+
+[http://aplikasi-kompensasi.herokuapp.com/](http://aplikasi-kompensasi.herokuapp.com/)
+
 ## Lisensi ##
 
 Aplikasi ini dirilis secara open-source dengan lisensi Apache License versi 2.0, yang [secara garis besar artinya sebagai berikut](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0)):
