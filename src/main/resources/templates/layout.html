@@ -49,7 +49,7 @@
                     <!-- Navbar Header-->
                     <div class="navbar-header">
                         <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
-                        <div class="brand-text brand-big hidden-lg-down"><span>Monitoring </span><strong>Tagihan dan VA</strong></div>
+                        <div class="brand-text brand-big hidden-lg-down"><span>Monitoring </span><strong>Kompensasi Pegawai</strong></div>
                         <div class="brand-text brand-small"><strong>BD</strong></div></a>
                         <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
                     </div>
@@ -79,13 +79,15 @@
             </div>
             <!-- Sidebar Navidation Menus--><span class="heading">Konfigurasi</span>
             <ul class="list-unstyled">
-                <li> <a th:href="@{/jenistagihan/list}"><i class="icon-grid"></i>Jenis Tagihan</a></li>
-                <li> <a th:href="@{/bank/list}"> <i class="fa fa-university"></i>Bank</a></li>
+                <li> <a th:href="@{/departemen/list}"><i class="icon-grid"></i>Departemen</a></li>
+                <li> <a href="#"><i class="icon-grid"></i>Jabatan Struktural</a></li>
+                <li> <a href="#"><i class="icon-grid"></i>Komponen Gaji</a></li>
+                <li> <a href="#"><i class="icon-grid"></i>Gaji Pokok</a></li>
             </ul><span class="heading">Transaksi</span>
             <ul class="list-unstyled">
-                <li> <a th:href="@{/siswa/list}"> <i class="icon-user"></i>Siswa</a></li>
-                <li> <a href="#"> <i class="fa fa-newspaper-o"></i>Tagihan</a></li>
-                <li> <a href="#"> <i class="fa fa-money"></i>Pembayaran</a></li>
+                <li> <a th:href="@{/karyawan/list}"> <i class="icon-user"></i>Karyawan</a></li>
+                <li> <a href="#"> <i class="fa fa-newspaper-o"></i>Kegiatan Karyawan</a></li>
+                <li> <a href="#"> <i class="fa fa-newspaper-o"></i>Cetak Slip Gaji</a></li>
             </ul>
         </nav>
         <div class="content-inner">

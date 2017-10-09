@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Departemen</title>
+</head>
+<body>
+<section layout:fragment="content" class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <a th:href="@{/departemen/form}" class="btn btn-lg btn-primary">Tambah Departemen</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                        <h3 class="h4">Daftar Departemen</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Kode Departemen</th>
+                                <th>Nama Departemen</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>SDM</td>
+                                <td>Sumber Daya Manusia</td>
+                                <td>
+                                    <a href="#" class="btn btn-xs">edit</a>
+                                    <a href="#" class="btn btn-xs">hapus</a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
