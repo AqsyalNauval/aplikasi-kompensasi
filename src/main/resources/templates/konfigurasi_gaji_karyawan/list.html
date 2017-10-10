@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Departemen</title>
+</head>
+<body>
+<section layout:fragment="content" class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card">
+                    <a th:href="@{/konfigurasi_gaji_karyawan/form}" class="btn btn-lg btn-primary">Tambah Konfigurasi Gaji</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                        <h3 class="h4">Tunjangan Kerja</h3>
+                        <div class="offset-sm-9">
+                            <a href="#">
+                                <button name="cari" class="btn btn-outline-danger">
+                                    <b>+</b>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Jenis </th>
+                                <th>Nilai</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tunjangan Makan</td>
+                                <td>
+                                    <input type="text" value="300.000"></input>
+                                </td>
+                                <td><a href="#">
+                                    <button name="cari" class="btn btn-outline-info">
+                                        <b>-</b>
+                                    </button></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

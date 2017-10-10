@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:v-on="http://www.w3.org/1999/xhtml"
+      xmlns:v-if="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Konfigurasi Gaji Karyawan</title>
+</head>
+<body>
+
+<section layout:fragment="content" class="tables">
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-center">
+                            <h3 class="h4">Konfigurasi Gaji Kotor Perorang</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form-horizontal">
+                                <div class="row form-group has-danger">
+                                    <label class="col-sm-3 form-control-label">Karyawan</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" id="karyawan"
+                                               name="karyawan"
+                                               placeholder="Karyawan" class="form-control">
+                                        </input>
+                                        <small class="invalid-feedback">Karyawan harus diisi</small>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button name="cari" class="btn btn-outline-info">
+                                                <a href="#"> <i class="icon-search" ></i></a></li>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row form-group has-danger">
+                                    <label class="col-sm-3 form-control-label">Gaji Pokok</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" id="gaji_pokok"
+                                               name="gaji_pokok"
+                                               placeholder="Jenis Gaji Pokok" class="form-control">
+                                        </input>
+                                        <small class="invalid-feedback">Jenis Gaji harus diisi</small>
+
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button name="cari" class="btn btn-outline-info">
+                                            <a href="#"> <i class="icon-search" ></i></a></li>
+                                        </button>
+                                    </div>
+                                    </br>
+                                    <label class="col-sm-3 form-control-label">Nilai Gaji Pokok</label>
+                                    <div class="col-sm-6">
+                                        <input type="number" id="nilai_gp"
+                                               name="nilai_gajipokok"
+                                               placeholder="Nilai Gaji Pokok" class="form-control">
+                                        </input>
+                                    </div>
+                                </div>
+                                <div class="row form-group has-danger">
+                                    <label class="col-sm-3 form-control-label">Tunjangan Jabatan</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" id="tunjangan_jabatan"
+                                               name="gaji_pokok"
+                                               placeholder="Tunjangan Jabatan" class="form-control">
+                                        </input>
+                                        <small class="invalid-feedback">Tunjangan Jabatan harus diisi</small>
+
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button name="cari" class="btn btn-outline-info">
+                                            <a href="#"> <i class="icon-search" ></i></a></li>
+                                        </button>
+                                    </div>
+                                    </br>
+                                    <label class="col-sm-3 form-control-label">Nilai</label>
+                                    <div class="col-sm-6">
+                                        <input type="number" id="nilai"
+                                               name="nilai_tunjangan"
+                                               placeholder="Nilai Tunjangan" class="form-control">
+                                        </input>
+                                    </div>
+                                </div>
+                                <div class="row form-group has-danger">
+                                    <label class="col-sm-3 form-control-label">Tunjangan Fungsional</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" id="tunjangan_fungsionan"
+                                               name="tujangan_fungsional"
+                                               placeholder="Tunjangan Fungsional" class="form-control">
+                                        </input>
+                                        <small class="invalid-feedback">Tunjangan Fungsional harus diisi</small>
+
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button name="cari" class="btn btn-outline-info">
+                                            <a href="#"> <i class="icon-search" ></i></a></li>
+                                        </button>
+                                    </div>
+                                    </br>
+                                    <label class="col-sm-3 form-control-label">Nilai</label>
+                                    <div class="col-sm-6">
+                                        <input type="number" id="nilai_tunjangan_fungsional"
+                                               name="nilai_tunjangan_fungsional"
+                                               placeholder="Nilai Tunjangan" class="form-control">
+                                        </input>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-9 offset-sm-3">
+                                        <input type="submit" value="Simpan" class="btn btn-info">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
