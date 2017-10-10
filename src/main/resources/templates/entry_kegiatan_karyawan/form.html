@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:v-on="http://www.w3.org/1999/xhtml"
+      xmlns:v-if="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Entry Kegiatan Karyawan</title>
+</head>
+<body>
+
+<section layout:fragment="content" class="tables">
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-center">
+                            <h3 class="h4">Entry Kegiatan Karyawan</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form-horizontal">
+                                <div class="row form-group has-danger">
+                                    <label class="col-sm-3 form-control-label">Karyawan</label>
+                                    <div class="col-sm-9">
+                                        <input id="karyawan" type="text"
+                                               name="karyawan"
+                                               placeholder="Karyawan" class="form-control">
+                                        <small class="invalid-feedback">Karyawan harus diisi</small>
+                                    </div>
+                                </div>
+                                <div class="row form-group has-danger">
+                                    <label class="col-sm-3 form-control-label">Nama Kegiatan</label>
+                                    <div class="col-sm-3 ">
+                                        <input id="nama_kegiatan" type="text"
+                                               name="nama_kegiatan"
+                                               placeholder="Nama Kegiatan" class="form-control">
+                                        <small class="invalid-feedback">Nama Kegiatan harus diisi</small>
+                                    </div>
+                                    <label class="col-sm- offset-sm-1 form-control-label">Tanggal Kegiatan</label>
+                                    <div class="col-sm-3">
+                                        <input id="tanggal_kegiatan" type="date"
+                                               name="tanggal_kegiatan"
+                                               placeholder="Tanggal Kegiatan" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="row form-group has-danger">
+                                    <label class="col-sm-3 form-control-label">Honor</label>
+                                    <div class="col-sm-9">
+                                        <input id="honor" type="text"
+                                               name="honor"
+                                               placeholder="Honor" class="form-control">
+                                        <small class="invalid-feedback">Honor harus diisi</small>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-9 offset-sm-3">
+                                        <input type="submit" value="Simpan" class="btn btn-primary">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
