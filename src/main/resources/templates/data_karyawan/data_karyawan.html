@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:v-on="http://www.w3.org/1999/xhtml"
+      xmlns:v-if="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Karyawan</title>
+</head>
+<body>
+
+<section layout:fragment="content" class="tables">
+
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-xs-4">
+                <div class="input-group" id="adv-search">
+                    <input type="text" class="form-control" placeholder="Search for snippets" />
+                    <div class="input-group-btn">
+                        <div class="btn-group" role="group">
+                            <div class="dropdown dropdown-lg">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret">Filter</span></button>
+                                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label >Filter</label>
+                                            <select class="form-control">
+                                                <option value="0" selected></option>
+                                                <option value="1"></option>
+                                                <option value="2"></option>
+                                                <option value="3"></option>
+                                                <option value="4"></option>
+                                            </select>
+                                        </div>
+                                        <button type="submit" name="search" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" name="refresh" class="btn btn-info"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    <button type="button" name="search" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </div>
+                </div>
+
+                <div class="col-md-12">
+                    <h4>Data Karyawan</h4>
+                    <div class="table-responsive">
+
+
+                        <table id="mytable" class="table table-bordred table-striped">
+
+                            <thead>
+
+                            <th><input type="checkbox" id="checkall" /></th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                            <th>Contact</th>
+                            <th>Edit</th>
+
+                            <th>Delete</th>
+                            </thead>
+                            <tbody>
+
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td>Mohsin</td>
+                                <td>Irshad</td>
+                                <td>Lido Permai</td>
+                                <td>moh.irs@gmail.com</td>
+                                <td>+08925586757</td>
+                                <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-warning btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td>Mohsin</td>
+                                <td>Irshad</td>
+                                <td>Lido Permai</td>
+                                <td>moh.irs@gmail.com</td>
+                                <td>+08935586757</td>
+                                <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-warning btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                            </tr>
+
+
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td>Mohsin</td>
+                                <td>Irshad</td>
+                                <td>Lido Permai</td>
+                                <td>moh.irs@gmail.com</td>
+                                <td>+08923586757</td>
+                                <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-warning btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td>Mohsin</td>
+                                <td>Irshad</td>
+                                <td>Lido Permai</td>
+                                <td>moh.irs@gmail.com</td>
+                                <td>+08925586757</td>
+                                <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-warning btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                            </tr>
+
+
+                            <tr>
+                                <td><input type="checkbox" class="checkthis" /></td>
+                                <td>Mohsin</td>
+                                <td>Irshad</td>
+                                <td>Lido Permai</td>
+                                <td>moh.irs@gmail.com</td>
+                                <td>+08925586757</td>
+                                <td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-warning btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+                                <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+                            </tr>
+
+
+
+
+
+                            </tbody>
+
+                        </table>
+
+                        <div class="clearfix"></div>
+                        <ul class="pagination pull-right">
+                            <li class="disabled"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                    <h4 class="modal-title custom_align" id="Head">Edit Your Detail</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <input class="form-control " type="text" placeholder="Mohsin">
+                    </div>
+                    <div class="form-group">
+
+                        <input class="form-control " type="text" placeholder="Irshad">
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="2" class="form-control" placeholder="Lido Permai"></textarea>
+
+
+                    </div>
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-warning btn-lg" style="width: 100%;"><span class="glyphicon glyphicon-ok-sign"></span> Update</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+
+
+    <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="edit" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                    <h4 class="modal-title custom_align" id="Heading">Delete this entry</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Apakah anda yakin akan menghapus record ini?</div>
+
+                </div>
+                <div class="modal-footer ">
+                    <button type="button" class="btn btn-success" ><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-body">
+        <div class="form-group">
+            <input type="submit" name="add" value="Baru" class="btn btn-success">
+            <input type="submit" name="edit" value="Edit" class="btn btn-warning">
+            <input type="submit" name="hapus" value="Hapus" class="btn btn-danger">
+        </div>
+    </div>
+
+
+
+    <script th:src="@{/js/aplikasi/siswa.js}"></script>
+</section>
+
+</body>
