@@ -7,6 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Data Karyawan</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 
@@ -205,12 +208,355 @@
 
     <div class="modal-body">
         <div class="form-group">
-            <input type="submit" name="add" value="Baru" class="btn btn-success">
+
+            <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#tambahKaryawan">Baru</button>
+            <div id="tambahKaryawan" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Data Karyawan</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="modal-body">
+<!--CONTAINER1-->
+                    <div class="container">
+                            <div class="col-xs-6">
+                                <div class="row input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="id_karyawan"
+                                               name="id_karyawan"
+                                               placeholder="ID Karyawan" class="form-control">
+                                        </input>
+                                </div>
+                            <br>
+                                <div class="row input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="nama_karyawan"
+                                               name="nama_karyawan"
+                                               placeholder="Nama Karyawan" class="form-control">
+                                        </input>
+                                </div>
+                            <br>
+                                <div class="row input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <select name="jk_karyawan" id="jk_karyawan" placeholder="" class="form-control">
+                                            <option value="1">Laki - Laki</option>
+                                            <option value="2">Perempuan</option>
+                                        </select>
+                                </div>
+                            <br>
+                                <div class="row input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="tempat_karyawan"
+                                               name="tempat_karyawan"
+                                               placeholder="Tempat Tinggal Karyawan" class="form-control">
+                                        </input>
+                                </div>
+                            <br>
+                                <div class="row input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="date" id="tgl_lahir_karyawan"
+                                               name="tgl_lahir_karyawan"
+                                               placeholder="" class="form-control">
+                                        </input>
+                                </div>
+                            <br>
+                            </div>
+
+
+                            <div class="col-xs-6">
+                                <div class="input-group image-preview">
+                                      <input type="text" class="form-control image-preview-filename" disabled="disabled">
+                                             <span class="input-group-btn">
+
+                                            <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                                            <span class="glyphicon glyphicon-remove"></span> Hapus
+                                             </button>
+
+                                    <div class="btn btn-default image-preview-input">
+                                     <span class="glyphicon glyphicon-folder-open"></span>
+                                     <span class="image-preview-input-title">Pilih Gambar</span>
+                                    <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
+                                    </div>
+                                     </span>
+                                </div>
+
+                            </div>
+                    </div>
+<!--ENDCONTAINER1-->
+
+<!--CONTAINER2-->
+                            <div class="container">
+                                <div class="col-xs-6">
+                                <div class="row input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <select name="status_karyawan" id="status_karyawan" placeholder="" class="form-control">
+                                        <option value="1">Tidak Kawin</option>
+                                        <option value="2">Kawin</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="row input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <select name="pengenal_karyawan" id="pengenal_karyawan" placeholder="" class="form-control">
+                                        <option value="1">N/A</option>
+                                        <option value="2">N/A</option>
+                                    </select>
+                                </div>
+                                <br>
+                                <div class="row input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input type="text" id="no_pengenal_karyawan"
+                                           name="no_pengenal_karyawan"
+                                           placeholder="No Pengenal Karyawan" class="form-control">
+                                    </input>
+                                </div>
+
+                                </div>
+
+
+                                <div class="col-xs-6">
+                                    <div class="row input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="ptkp_karyawan"
+                                           name="ptkp_karyawan"
+                                           placeholder="Tarif PTKP" class="form-control">
+                                        </input>
+                                 </div>
+                             <br>
+                                    <div class="row input-group">
+                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                     <input type="text" id="npwp_karyawan"
+                                           name="npwp_karyawan"
+                                           placeholder="NPWP" class="form-control">
+                                        </input>
+                                     </div>
+                             <br>
+                                    <div class="row input-group">
+                                      <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                      <input type="date" id="tgl_npwp_karyawan"
+                                           name="tgl_npwp_karyawan"
+                                           placeholder="" class="form-control">
+                                      </input>
+                                     </div>
+
+                                 </div>
+
+                             </div>
+<!--ENDCONTAINER2-->
+<br>
+<!--CONTAINER3-->
+                            <div class="container">
+                                <div class="col-xs-6">
+                                    <div class="row input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="telepon1_karyawan"
+                                               name="telepon1_karyawan"
+                                               placeholder="Telepon 1 Karyawan" class="form-control">
+                                        </input>
+                                    </div>
+                                    <br>
+                                    <div class="row input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="telepon2_karyawan"
+                                               name="telepon2_karyawan"
+                                               placeholder="Telepon 2 Karyawan" class="form-control">
+                                        </input>
+                                    </div>
+                                    <br>
+                                    <div class="row input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="hp_karyawan"
+                                               name="hp_karyawan"
+                                               placeholder="HP Karyawan" class="form-control">
+                                        </input>
+                                    </div>
+                                    <br>
+                                    <div class="row input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="alamat1_karyawan"
+                                               name="alamat1_karyawan"
+                                               placeholder="Alamat 1 Karyawan" class="form-control">
+                                        </input>
+                                    </div>
+                                    <br>
+                                    <div class="row input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="alamat2_karyawan"
+                                               name="alamat2_karyawan"
+                                               placeholder="Alamat 2 Karyawan" class="form-control">
+                                        </input>
+                                    </div>
+                                    <br>
+                                    <div class="row input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="kota_karyawan"
+                                               name="kota_karyawan"
+                                               placeholder="Kota Karyawan" class="form-control">
+                                        </input>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-6">
+                                    <div class="row input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="fax_karyawan"
+                                               name="fax_karyawan"
+                                               placeholder="Fax Karyawan" class="form-control">
+                                        </input>
+                                    </div>
+                                    <br>
+                                    <div class="row input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="email" id="email_karyawan"
+                                               name="email_karyawan"
+                                               placeholder="Email Karyawan" class="form-control">
+                                        </input>
+                                    </div>
+                                    <br>
+                                    <div class="row input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="website_karyawan"
+                                               name="website_karyawan"
+                                               placeholder="Website Karyawan" class="form-control">
+                                        </input>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="row input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="zip_karyawan"
+                                               name="zip_karyawan"
+                                               placeholder="ZIP Karyawan" class="form-control">
+                                        </input>
+                                    </div>
+                                    <br>
+                                    <div class="row input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input type="text" id="negara_karyawan"
+                                               name="negara_karyawan"
+                                               placeholder="Negara Karyawan" class="form-control">
+                                        </input>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+<!--ENDCONTAINER3-->
+
+                        </div>
+
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-info" >Next</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
             <input type="submit" name="edit" value="Edit" class="btn btn-warning">
             <input type="submit" name="hapus" value="Hapus" class="btn btn-danger">
         </div>
     </div>
 
+
+    <!-- Script & Style input image -->
+    <script>
+        $(document).on('click', '#close-preview', function(){
+            $('.image-preview').popover('hide');
+            // Hover befor close the preview
+            $('.image-preview').hover(
+                function () {
+                    $('.image-preview').popover('show');
+                },
+                function () {
+                    $('.image-preview').popover('hide');
+                }
+            );
+        });
+
+        $(function() {
+            // Create the close button
+            var closebtn = $('<button/>', {
+                type:"button",
+                text: 'x',
+                id: 'close-preview',
+                style: 'font-size: initial;',
+            });
+            closebtn.attr("class","close pull-right");
+            // Set the popover default content
+            $('.image-preview').popover({
+                trigger:'manual',
+                html:true,
+                title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
+                content: "There's no image",
+                placement:'bottom'
+            });
+            // Clear event
+            $('.image-preview-clear').click(function(){
+                $('.image-preview').attr("data-content","").popover('hide');
+                $('.image-preview-filename').val("");
+                $('.image-preview-clear').hide();
+                $('.image-preview-input input:file').val("");
+                $(".image-preview-input-title").text("Browse");
+            });
+            // Create the preview image
+            $(".image-preview-input input:file").change(function (){
+                var img = $('<img/>', {
+                    id: 'dynamic',
+                    width:250,
+                    height:200
+                });
+                var file = this.files[0];
+                var reader = new FileReader();
+                // Set preview image into the popover data-content
+                reader.onload = function (e) {
+                    $(".image-preview-input-title").text("Change");
+                    $(".image-preview-clear").show();
+                    $(".image-preview-filename").val(file.name);
+                    img.attr('src', e.target.result);
+                    $(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
+                }
+                reader.readAsDataURL(file);
+            });
+        });
+
+    </script>
+    <style>
+        .container{
+            margin-top:20px;
+        }
+        .image-preview-input {
+            position: relative;
+            overflow: hidden;
+            margin: 0px;
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+        }
+        .image-preview-input input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+        .image-preview-input-title {
+            margin-left:2px;
+        }
+    </style>
+    <!-- // -->
 
 
     <script th:src="@{/js/aplikasi/siswa.js}"></script>

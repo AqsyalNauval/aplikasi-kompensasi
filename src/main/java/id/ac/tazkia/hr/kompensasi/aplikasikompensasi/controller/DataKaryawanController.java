@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class DataKaryawanController {
 
     @GetMapping("/data_karyawan/data_karyawan")
-    public void daftarDepartemen(){
+    public void dataKaryawan(){
 
     }
+
+
 }
