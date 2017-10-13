@@ -6,8 +6,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class DataKaryawanController {
 
-    @GetMapping("/data_karyawan/data_karyawan")
+    @GetMapping("/data_karyawan/list")
     public void dataKaryawan(){
+
+    }
+
+    @GetMapping("/data_karyawan/form")
+    public void karyawanForm(){
 
     }
 

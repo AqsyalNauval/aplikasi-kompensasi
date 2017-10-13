@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class NilaiTunjanganKinerjaController {
 
-    @GetMapping("/nilai_tunjangan_kinerja/form_nilai_tunjangan")
+    @GetMapping("/nilai_tunjangan_kinerja/list")
     public void daftarTunjanganKinerja(){
 
     }
