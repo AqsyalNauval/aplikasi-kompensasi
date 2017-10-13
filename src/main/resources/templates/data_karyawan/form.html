@@ -29,25 +29,25 @@
                         </ul>
                         <div id="myTabContent" class="tab-content">
                             <div class="tab-pane active in" id="biodata">
-                        <div class="card-body">
-                            <form class="form-horizontal">
+                                <div class="card-body">
+                                    <form class="form-horizontal">
 
-                              <div class="container">
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">ID</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="id_karyawan"
-                                               name="id_karyawan"
-                                               placeholder="ID" class="form-control">
-                                        </input>
-                                        <small class="invalid-feedback">ID harus diisi</small>
-                                    </div>
+                                        <div class="container">
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">ID</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="id_karyawan"
+                                                           name="id_karyawan"
+                                                           placeholder="ID" class="form-control">
+                                                    </input>
+                                                    <small class="invalid-feedback">ID harus diisi</small>
+                                                </div>
 
-                                    <label class="col-sm-1 form-control-label">Foto</label>
-                                    <div class="col-md-5">
-                                        <div class="input-group image-preview">
-                                            <input type="text" class="form-control image-preview-filename" disabled="disabled">
-                                                 <span class="input-group-btn">
+                                                <label class="col-sm-1 form-control-label">Foto</label>
+                                                <div class="col-md-5">
+                                                    <div class="input-group image-preview">
+                                                        <input type="text" class="form-control image-preview-filename" disabled="disabled">
+                                                        <span class="input-group-btn">
 
                                                      <button type="button" class="btn btn-danger image-preview-clear" style="display:none;">
                                                          <span class="glyphicon glyphicon-remove"></span> Hapus
@@ -59,219 +59,219 @@
                                                          <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
                                             </div>
                                                   </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Nama</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="nama_karyawan"
+                                                           name="nama_karyawan"
+                                                           placeholder="Nama Karyawan" class="form-control">
+                                                    </input>
+                                                    <small class="invalid-feedback">Nama harus diisi</small>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Jenis Kelamin</label>
+                                                <div class="col-sm-5">
+                                                    <label class="radio-inline">
+                                                        <input id="inlineradio1" name="op1_jk" value="op1_jk" type="radio">
+                                                        Pria</label>
+                                                    &nbsp;&nbsp;
+                                                    <label class="radio-inline">
+                                                        <input id="inlineradio2" name="op1_jk" value="op2_jk" type="radio">
+                                                        Wanita</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Tempat Lahir</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="tempat_lahir"
+                                                           name="tempat_lahir"
+                                                           placeholder="tempat_lahir" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Tanggal Lahir</label>
+                                                <div class="col-sm-5">
+                                                    <input type="date" id="lahir_karyawan"
+                                                           name="lahir_karyawan"
+                                                           placeholder="" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
 
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">Nama</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="nama_karyawan"
-                                               name="nama_karyawan"
-                                               placeholder="Nama Karyawan" class="form-control">
-                                        </input>
-                                        <small class="invalid-feedback">Nama harus diisi</small>
-                                    </div>
-                                </div>
+                                        <hr>
 
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">Jenis Kelamin</label>
-                                    <div class="col-sm-5">
-                                        <label class="radio-inline">
-                                            <input id="inlineradio1" name="op1_jk" value="op1_jk" type="radio">
-                                            Pria</label>
-                                        &nbsp;&nbsp;
-                                        <label class="radio-inline">
-                                            <input id="inlineradio2" name="op1_jk" value="op2_jk" type="radio">
-                                            Wanita</label>
-                                    </div>
-                                </div>
+                                        <div class="container">
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Marital Status</label>
+                                                <div class="col-sm-5">
+                                                    <label class="radio-inline">
+                                                        <input id="op1_marital" name="op1_marital" value="op1_marital" type="radio">
+                                                        Kawin</label>
+                                                    &nbsp;&nbsp;
+                                                    <label class="radio-inline">
+                                                        <input id="op2_marital" name="op2_marital" value="op2_marital" type="radio">
+                                                        Tidak Kawin</label>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Tarif PTKP</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="tarif_ptkp"
+                                                           name="tarif_ptkp"
+                                                           placeholder="Tarif PTKP" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
 
-                                 <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">Tempat Lahir</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="tempat_lahir"
-                                            name="tempat_lahir"
-                                            placeholder="tempat_lahir" class="form-control">
-                                        </input>
-                                    </div>
-                                 </div>
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Tanda Pengenal</label>
+                                                <div class="col-sm-5">
+                                                    <label class="radio-inline">
+                                                        <input id="op1_pengenal" name="op1_pengenal" value="op1_pengenal" type="radio">
+                                                        N/A</label>
+                                                    &nbsp;&nbsp;
+                                                    <label class="radio-inline">
+                                                        <input id="op2_pengenal" name="op2_pengenal" value="op2_pengenal" type="radio">
+                                                        N/A</label>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">NPWP</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="npwp"
+                                                           name="npwp"
+                                                           placeholder="NPWP" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
 
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">Tanggal Lahir</label>
-                                    <div class="col-sm-5">
-                                        <input type="date" id="tgl_lahir_karyawan"
-                                            name="tgl_lahir_karyawan"
-                                            placeholder="" class="form-control">
-                                        </input>
-                                    </div>
-                                </div>
-                              </div>
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">No Pengenal</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="no_pengenal"
+                                                           name="no_pengenal"
+                                                           placeholder="Nomor Pengenal" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Tanggal NPWP</label>
+                                                <div class="col-sm-5">
+                                                    <input type="date" id="tgl_npwp"
+                                                           name="tgl_npwp"
+                                                           placeholder="" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+                                        </div>
 
-                                <hr>
+                                        <hr>
 
-                            <div class="container">
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">Marital Status</label>
-                                    <div class="col-sm-5">
-                                        <label class="radio-inline">
-                                            <input id="op1_marital" name="op1_marital" value="op1_marital" type="radio">
-                                            Kawin</label>
-                                        &nbsp;&nbsp;
-                                        <label class="radio-inline">
-                                            <input id="op2_marital" name="op2_marital" value="op2_marital" type="radio">
-                                            Tidak Kawin</label>
-                                    </div>
-                                    <label class="col-sm-1 form-control-label">Tarif PTKP</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="tarif_ptkp"
-                                               name="tarif_ptkp"
-                                               placeholder="Tarif PTKP" class="form-control">
-                                        </input>
-                                    </div>
-                                </div>
+                                        <div class="container">
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Telepon 1</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="telepon1"
+                                                           name="telepon1"
+                                                           placeholder="Telepon 2 Karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Fax</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="fax"
+                                                           name="fax"
+                                                           placeholder="Fax Karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
 
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">Tanda Pengenal</label>
-                                    <div class="col-sm-5">
-                                        <label class="radio-inline">
-                                            <input id="op1_pengenal" name="op1_pengenal" value="op1_pengenal" type="radio">
-                                            N/A</label>
-                                        &nbsp;&nbsp;
-                                        <label class="radio-inline">
-                                            <input id="op2_pengenal" name="op2_pengenal" value="op2_pengenal" type="radio">
-                                            N/A</label>
-                                    </div>
-                                    <label class="col-sm-1 form-control-label">NPWP</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="npwp"
-                                               name="npwp"
-                                               placeholder="NPWP" class="form-control">
-                                        </input>
-                                    </div>
-                                </div>
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Telepon 2</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="Telepon 2"
+                                                           name="Telepon 2"
+                                                           placeholder="Telepon 2 Karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Email</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="email"
+                                                           name="email"
+                                                           placeholder="Email Karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
 
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">No Pengenal</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="no_pengenal"
-                                               name="no_pengenal"
-                                               placeholder="Nomor Pengenal" class="form-control">
-                                        </input>
-                                    </div>
-                                    <label class="col-sm-1 form-control-label">Tanggal NPWP</label>
-                                    <div class="col-sm-5">
-                                        <input type="date" id="tgl_npwp"
-                                               name="tgl_npwp"
-                                               placeholder="" class="form-control">
-                                        </input>
-                                    </div>
-                                </div>
-                            </div>
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Hp</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="hp"
+                                                           name="hp"
+                                                           placeholder="Hp Karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Website</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="website"
+                                                           name="website"
+                                                           placeholder="Website" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
 
-                                <hr>
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Alamat 1</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="alamat1"
+                                                           name="alamat1"
+                                                           placeholder="Alamat 1 karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
 
-                            <div class="container">
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">Telepon 1</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="telepon1"
-                                               name="telepon1"
-                                               placeholder="Telepon 2 Karyawan" class="form-control">
-                                        </input>
-                                    </div>
-                                    <label class="col-sm-1 form-control-label">Fax</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="fax"
-                                               name="fax"
-                                               placeholder="Fax Karyawan" class="form-control">
-                                        </input>
-                                    </div>
-                                </div>
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Alamat 2</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="alamat2"
+                                                           name="alamat2"
+                                                           placeholder="Alamat 2 karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Zip</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="zip"
+                                                           name="zip"
+                                                           placeholder="Zip" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
 
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">Telepon 2</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="Telepon 2"
-                                               name="Telepon 2"
-                                               placeholder="Telepon 2 Karyawan" class="form-control">
-                                        </input>
-                                    </div>
-                                    <label class="col-sm-1 form-control-label">Email</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="email"
-                                               name="email"
-                                               placeholder="Email Karyawan" class="form-control">
-                                        </input>
-                                    </div>
-                                </div>
-
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">Hp</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="hp"
-                                               name="hp"
-                                               placeholder="Hp Karyawan" class="form-control">
-                                        </input>
-                                    </div>
-                                    <label class="col-sm-1 form-control-label">Website</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="website"
-                                               name="website"
-                                               placeholder="Website" class="form-control">
-                                        </input>
-                                    </div>
-                                </div>
-
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">Alamat 1</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="alamat1"
-                                               name="alamat1"
-                                               placeholder="Alamat 1 karyawan" class="form-control">
-                                        </input>
-                                    </div>
-                                </div>
-
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">Alamat 2</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="alamat2"
-                                               name="alamat2"
-                                               placeholder="Alamat 2 karyawan" class="form-control">
-                                        </input>
-                                    </div>
-                                    <label class="col-sm-1 form-control-label">Zip</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="zip"
-                                               name="zip"
-                                               placeholder="Zip" class="form-control">
-                                        </input>
-                                    </div>
-                                </div>
-
-                                <div class="row form-group has-danger">
-                                    <label class="col-sm-1 form-control-label">Kota</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="kota"
-                                               name="kota"
-                                               placeholder="Kota" class="form-control">
-                                        </input>
-                                    </div>
-                                    <label class="col-sm-1 form-control-label">Negara</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" id="negara"
-                                               name="negara"
-                                               placeholder="Negara" class="form-control">
-                                        </input>
-                                    </div>
-                                </div>
-                            </div>
-                            </form>
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Kota</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="kota"
+                                                           name="kota"
+                                                           placeholder="Kota" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Negara</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="negara"
+                                                           name="negara"
+                                                           placeholder="Negara" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
 
-                        <!--TABDATAKERJA-->
+                            <!--TABDATAKERJA-->
 
                             <div class="tab-pane active in" id="datakerja">
                                 <div class="card-body">
@@ -405,14 +405,14 @@
                             </div>
 
 
-                            </div>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
+    </div>
     </div>
 
 
