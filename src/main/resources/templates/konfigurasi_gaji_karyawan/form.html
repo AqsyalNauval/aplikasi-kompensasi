@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:v-on="http://www.w3.org/1999/xhtml"
+      xmlns:v-if="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Konfigurasi Gaji Karyawan</title>
+</head>
+<body>
+
+<section layout:fragment="content" class="tables">
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="card">
+                        <div class="card-header d-flex align-items-center">
+                            <h3 class="h4">Konfigurasi Gaji Kotor Perorang</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form-horizontal">
+                                <div class="row form-group has-danger">
+                                    <label class="col-sm-3 form-control-label">Karyawan</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" id="karyawan"
+                                               name="karyawan"
+                                               placeholder="Karyawan" class="form-control">
+                                        </input>
+                                        <small class="invalid-feedback">Karyawan harus diisi</small>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modalkaryawan">
+                                            <a href="#"> <i class="icon-search" ></i></a></li>
+                                        </button>
+
+                                        <!-- Modal Karyawan -->
+                                        <div class="modal fade" style="margin-top: 50px;" id="modalkaryawan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog " role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Karyawan</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <div class="col-md-12">
+                                                                <select name="mdlkaryawan" id="mdlkaryawan" class="form-control" placeholder="Ketik Nama atau Nim">
+                                                                    <option value=""></option>
+                                                                    <option value="">test</option>
+                                                                    <option value="">haidar</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary">Ok</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row form-group has-danger">
+                                    <label class="col-sm-3 form-control-label">Gaji Pokok</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" id="gaji_pokok"
+                                               name="gaji_pokok"
+                                               placeholder="Jenis Gaji Pokok" class="form-control">
+                                        </input>
+                                        <small class="invalid-feedback">Jenis Gaji harus diisi</small>
+
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modaljenisgaji">
+                                            <a href="#"> <i class="icon-search" ></i></a></li>
+                                        </button>
+
+                                        <!-- Modal Janis gaji -->
+                                        <div class="modal fade" style="margin-top: 50px;" id="modaljenisgaji" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog " role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="mdl">Jenis Gaji</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <div class="col-md-12">
+                                                                <select name="mdljenisgaji" id="mdljenisgaji" class="form-control" placeholder="Ketik Nama atau Nim">
+                                                                    <option value=""></option>
+                                                                    <option value="">test</option>
+                                                                    <option value="">haidar</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary">Ok</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <label class="col-sm-3 form-control-label">Nilai Gaji Pokok</label>
+                                    <div class="col-sm-6">
+                                        <input type="number" id="nilai_gp"
+                                               name="nilai_gajipokok"
+                                               placeholder="Nilai Gaji Pokok" class="form-control">
+                                        </input>
+                                    </div>
+                                </div>
+                                <div class="row form-group has-danger">
+                                    <label class="col-sm-3 form-control-label">Tunjangan Jabatan</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" id="tunjangan_jabatan"
+                                               name="gaji_pokok"
+                                               placeholder="Tunjangan Jabatan" class="form-control">
+                                        </input>
+                                        <small class="invalid-feedback">Tunjangan Jabatan harus diisi</small>
+
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modaltunjanganjabatan">
+                                            <a href="#"> <i class="icon-search" ></i></a></li>
+                                        </button>
+
+                                        <!-- Modal Tunjangan Jabatan -->
+                                        <div class="modal fade" style="margin-top: 50px;" id="modaltunjanganjabatan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog " role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="mdltunjangan">Tunjangan Jabatan</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="container">
+                                                            <div class="col-md-12">
+                                                                <select name="mdltunjanganjabatan" id="mdltunjanganjabatan" class="form-control" placeholder="Ketik Nama atau Nim">
+                                                                    <option value=""></option>
+                                                                    <option value="">test</option>
+                                                                    <option value="">haidar</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-primary">Ok</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </br>
+                                    <label class="col-sm-3 form-control-label">Nilai</label>
+                                    <div class="col-sm-6">
+                                        <input type="number" id="nilai"
+                                               name="nilai_tunjangan"
+                                               placeholder="Nilai Tunjangan" class="form-control">
+                                        </input>
+                                    </div>
+                                </div>
+                                <div class="row form-group has-danger">
+                                    <label class="col-sm-3 form-control-label">Tunjangan Fungsional</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" id="tunjangan_fungsionan"
+                                               name="tujangan_fungsional"
+                                               placeholder="Tunjangan Fungsional" class="form-control">
+                                        </input>
+                                        <small class="invalid-feedback">Tunjangan Fungsional harus diisi</small>
+
+                                    </div>
+                                    <div class="col-sm-3">
+                                            <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#modaltunjanganfungsional">
+                                                <a href="#"> <i class="icon-search" ></i></a></li>
+                                            </button>
+
+                                            <!-- Modal Tunjangan Fungsional-->
+                                            <div class="modal fade" style="margin-top: 50px;" id="modaltunjanganfungsional" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog " role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="mdlfungsional">Tunjangan Fungsional</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <div class="container">
+                                                                <div class="col-md-12">
+                                                                    <select name="mdltunjanganfungsional" id="mdltunjanganfungsional" class="form-control" placeholder="Ketik Nama atau Nim">
+                                                                        <option value=""></option>
+                                                                        <option value="">test</option>
+                                                                        <option value="">haidar</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-primary">Ok</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </br>
+                                    <label class="col-sm-3 form-control-label">Nilai</label>
+                                    <div class="col-sm-6">
+                                        <input type="number" id="nilai_tunjangan_fungsional"
+                                               name="nilai_tunjangan_fungsional"
+                                               placeholder="Nilai Tunjangan" class="form-control">
+                                        </input>
+                                    </div>
+                                </div>                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- List -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                        <h3 class="h4">Tunjangan Kerja</h3>
+                        <div class="offset-sm-9">
+                            <a href="#">
+                                <button name="cari" class="btn btn-outline-danger">
+                                    <b>+</b>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Jenis </th>
+                                <th>Nilai</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Tunjangan Makan</td>
+                                <td>
+                                    <input type="text" value="300.000"></input>
+                                </td>
+                                <td><a href="#">
+                                    <button name="cari" class="btn btn-outline-info">
+                                        <b>-</b>
+                                    </button></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                         <div class="form-group row">
+                                    <div class="col-sm-9 offset-sm-3">
+                                        <input type="submit" value="Simpan" class="btn btn-info">
+                                    </div>
+                          </div>
+                       </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
