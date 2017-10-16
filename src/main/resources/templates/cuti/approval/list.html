@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Persetujuan Cuti</title>
+</head>
+<body>
+<section layout:fragment="content" class="tables">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="card">
+                    <div class="card-header d-flex align-items-center">
+                        <h3 class="h4">Daftar Pengajuan Cuti Karyawan</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th>Tanggal Mulai</th>
+                                <th>Tanggal Selesai</th>
+                                <th>Karyawan</th>
+                                <th>&nbsp;</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>16-10-2017</td>
+                                <td>20-10-2017</td>
+                                <td>Ramadhani Indra</td>
+                                <td>
+                                    <a href="#" class="btn btn-xs">Setuju</a>
+                                    <a href="#" class="btn btn-xs" data-toggle="modal" data-target="#modaltolak">Tolak</a>
+
+                                    <!-- Modal Tolak Persetujuan-->
+                                    <div class="modal fade" style="margin-top: 50px;" id="modaltolak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog " role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="mdltolak">Keterangan </h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="container">
+                                                        <div class="col-md-12">
+                                                            <textarea name="txttolak" class="form-control" placeholder="Isi Keterangan"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-primary">Ok</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    </div>
+                    </td>
+                    </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+</body>
+</html>l>
