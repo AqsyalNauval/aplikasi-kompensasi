@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:v-on="http://www.w3.org/1999/xhtml"
+      xmlns:v-if="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Gaji Pokok</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<section layout:fragment="content" class="tables">
+    <div id="daftarSiswa">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="card">
+
+                        <div class="card-header d-flex align-items-center">
+                            <h3 class="h4">Data Karyawan</h3>
+                        </div>
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#biodata" data-toggle="tab">Biodata</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="#datakerja" data-toggle="tab">Data Kerja</a>
+                            </li>
+                        </ul>
+                        <div id="myTabContent" class="tab-content">
+                            <div class="tab-pane active in" id="biodata">
+                                <div class="card-body">
+                                    <form class="form-horizontal">
+
+                                        <div class="container">
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">ID</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="id_karyawan"
+                                                           name="id_karyawan"
+                                                           placeholder="ID" class="form-control">
+                                                    </input>
+                                                    <small class="invalid-feedback">ID harus diisi</small>
+                                                </div>
+
+                                                <label class="col-sm-1 form-control-label">Foto</label>
+                                                <div class="col-md-5">
+                                                    <div class="input-group image-preview">
+                                                        <input type="text" class="form-control image-preview-filename" disabled="disabled">
+                                                        <span class="input-group-btn">
+
+                                                     <button type="button" class="btn btn-danger image-preview-clear" style="display:none;">
+                                                         <i class="fa fa-window-close"></i>Hapus
+                                                     </button>
+
+                                            <div class="btn btn-default image-preview-input">
+                                                         <i class="fa fa-file-image-o"></i>
+                                                         <span class="image-preview-input-title">Pilih Gambar</span>
+                                                         <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
+                                            </div>
+                                                  </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Nama</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="nama_karyawan"
+                                                           name="nama_karyawan"
+                                                           placeholder="Nama Karyawan" class="form-control">
+                                                    </input>
+                                                    <small class="invalid-feedback">Nama harus diisi</small>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Jenis Kelamin</label>
+                                                <div class="col-sm-5">
+                                                    <label class="radio-inline">
+                                                        <input id="inlineradio1" name="op1_jk" value="op1_jk" type="radio">
+                                                        Pria</label>
+                                                    &nbsp;&nbsp;
+                                                    <label class="radio-inline">
+                                                        <input id="inlineradio2" name="op1_jk" value="op2_jk" type="radio">
+                                                        Wanita</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Tempat Lahir</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="tempat_lahir"
+                                                           name="tempat_lahir"
+                                                           placeholder="tempat_lahir" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Tanggal Lahir</label>
+                                                <div class="col-sm-5">
+                                                    <input type="date" id="lahir_karyawan"
+                                                           name="lahir_karyawan"
+                                                           placeholder="" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <div class="container">
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Marital Status</label>
+                                                <div class="col-sm-5">
+                                                    <label class="radio-inline">
+                                                        <input id="op1_marital" name="op1_marital" value="op1_marital" type="radio">
+                                                        Kawin</label>
+                                                    &nbsp;&nbsp;
+                                                    <label class="radio-inline">
+                                                        <input id="op2_marital" name="op1_marital" value="op2_marital" type="radio">
+                                                        Tidak Kawin</label>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Tarif PTKP</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="tarif_ptkp"
+                                                           name="tarif_ptkp"
+                                                           placeholder="Tarif PTKP" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Tanda Pengenal</label>
+                                                <div class="col-sm-5">
+                                                    <label class="radio-inline">
+                                                        <input id="op1_pengenal" name="op1_pengenal" value="op1_pengenal" type="radio">
+                                                        N/A</label>
+                                                    &nbsp;&nbsp;
+                                                    <label class="radio-inline">
+                                                        <input id="op2_pengenal" name="op1_pengenal" value="op2_pengenal" type="radio">
+                                                        N/A</label>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">NPWP</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="npwp"
+                                                           name="npwp"
+                                                           placeholder="NPWP" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">No Pengenal</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="no_pengenal"
+                                                           name="no_pengenal"
+                                                           placeholder="Nomor Pengenal" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Tanggal NPWP</label>
+                                                <div class="col-sm-5">
+                                                    <input type="date" id="tgl_npwp"
+                                                           name="tgl_npwp"
+                                                           placeholder="" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <hr>
+
+                                        <div class="container">
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Telepon 1</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="telepon1"
+                                                           name="telepon1"
+                                                           placeholder="Telepon 2 Karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Fax</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="fax"
+                                                           name="fax"
+                                                           placeholder="Fax Karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Telepon 2</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="Telepon 2"
+                                                           name="Telepon 2"
+                                                           placeholder="Telepon 2 Karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Email</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="email"
+                                                           name="email"
+                                                           placeholder="Email Karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Hp</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="hp"
+                                                           name="hp"
+                                                           placeholder="Hp Karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Website</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="website"
+                                                           name="website"
+                                                           placeholder="Website" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Alamat 1</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="alamat1"
+                                                           name="alamat1"
+                                                           placeholder="Alamat 1 karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Alamat 2</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="alamat2"
+                                                           name="alamat2"
+                                                           placeholder="Alamat 2 karyawan" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Zip</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="zip"
+                                                           name="zip"
+                                                           placeholder="Zip" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Kota</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="kota"
+                                                           name="kota"
+                                                           placeholder="Kota" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Negara</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="negara"
+                                                           name="negara"
+                                                           placeholder="Negara" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <!--TABDATAKERJA-->
+
+                            <div class="tab-pane active in" id="datakerja">
+                                <div class="card-body">
+                                    <form class="form-horizontal">
+                                        <div class="container">
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Status Karyawan</label>
+                                                <div class="col-sm-5">
+                                                    <label class="radio-inline">
+                                                        <input id="op1_statuskaryawan" name="op1_statuskaryawan" value="op1_statuskaryawan" type="radio">
+                                                        Pria</label>
+                                                    &nbsp;&nbsp;
+                                                    <label class="radio-inline">
+                                                        <input id="op2_statuskaryawan" name="op1_statuskaryawan" value="op2_statuskaryawan" type="radio">
+                                                        Wanita</label>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Mata Uang</label>
+                                                <div class="col-sm-5">
+                                                    <label class="radio-inline">
+                                                        <input id="op1_uang" name="op1_uang" value="op1_uang" type="radio">
+                                                        IDR</label>
+                                                    &nbsp;&nbsp;
+                                                    <label class="radio-inline">
+                                                        <input id="op2_uang" name="op1_uang" value="op2_uang" type="radio">
+                                                        USD</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Tanggal Mulai Kerja</label>
+                                                <div class="col-sm-5">
+                                                    <input type="date" id="mulai_karyawan"
+                                                           name="mulai_karyawan"
+                                                           placeholder="" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Tanggal Berhenti Kerja</label>
+                                                <div class="col-sm-5">
+                                                    <input type="date" id="berhenti_karyawan"
+                                                           name="berhenti_karyawan"
+                                                           placeholder="" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Limit Peminjaman </label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="limit_peminjaman"
+                                                           name="limit_peminjaman"
+                                                           placeholder="Limit Peminjaman" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Departe men</label>
+                                                <div class="col-sm-5">
+                                                        <input type="text" id="departemen"
+                                                           name="departemen"
+                                                           placeholder="Departmen" data-toggle="modal" data-target="#modaldepartemen" class="form-control">
+                                                        </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Jabatan</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="jabatan"
+                                                           name="jabatan"
+                                                           placeholder="Jabatan" data-toggle="modal" data-target="#modaljabatan" class="form-control">
+                                                        </input>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                        </div>
+
+                                        <div class="container">
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Level Gaji</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="level_gaji"
+                                                           name="level_gaji"
+                                                           placeholder="Level Gaji" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">Metode Pajak</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="metode_pajak"
+                                                           name="metode_pajak"
+                                                           placeholder="Metode Pajak" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Pemba yaran Gaji</label>
+                                                <div class="col-sm-5">
+                                                    <label class="radio-inline">
+                                                        <input id="op1_pembayaran" name="op1_pembayaran" value="op1_pembayaran" type="radio">
+                                                        Transfer</label>
+                                                    &nbsp;&nbsp;
+                                                    <label class="radio-inline">
+                                                        <input id="op2_pembayaran" name="op1_pembayaran" value="op2_pembayaran" type="radio">
+                                                        Cash</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="row form-group has-danger">
+                                                <label class="col-sm-1 form-control-label">Nama Bank</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="nama_bank"
+                                                           name="nama_bank"
+                                                           placeholder="Nama Bank" class="form-control">
+                                                    </input>
+                                                </div>
+                                                <label class="col-sm-1 form-control-label">No Rekening</label>
+                                                <div class="col-sm-5">
+                                                    <input type="text" id="no_rekening"
+                                                           name="no_rekening"
+                                                           placeholder="No Rekening" class="form-control">
+                                                    </input>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="form-group row">
+                                                <div class="col-sm-4 offset-sm-1">
+                                                    <input type="submit" value="Simpan" class="btn btn-primary">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Modal Departemen -->
+    <div class="modal fade" id="modaldepartemen" tabindex="-1" role="dialog" aria-labelledby="modaldepartemen" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modaldepartemen2">Data Departemen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-header">
+                                <div class="input-group">
+                                    <input type="hidden" name="search_param" value="all" id="search_param2">
+                                    <input type="text" class="form-control" name="search" placeholder="Pencarian">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info" type="button"><i class="fa fa-search"></i></button>
+                                    </span>
+                                </div>
+                </div>
+                <div class="modal-body">
+                    Content
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" >Baru</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Jabatan -->
+    <div class="modal fade" id="modaljabatan" tabindex="-1" role="dialog" aria-labelledby="modaljabatan" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modaljabatan2">Data Jabatan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-header">
+                                <div class="input-group">
+                                    <input type="hidden" name="search_param" value="all" id="search_param">
+                                    <input type="text" class="form-control" name="search" placeholder="Pencarian">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info" type="button"><i class="fa fa-search"></i></button>
+                                    </span>
+                    </div>
+                </div>
+                <div class="modal-body">
+Content
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" >Baru</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        $(document).on('click', '#close-preview', function(){
+            $('.image-preview').popover('hide');
+            // Hover befor close the preview
+            $('.image-preview').hover(
+                function () {
+                    $('.image-preview').popover('show');
+                },
+                function () {
+                    $('.image-preview').popover('hide');
+                }
+            );
+        });
+
+        $(function() {
+            // Create the close button
+            var closebtn = $('<button/>', {
+                type:"button",
+                text: 'x',
+                id: 'close-preview',
+                style: 'font-size: initial;',
+            });
+            closebtn.attr("class","close pull-right");
+            // Set the popover default content
+            $('.image-preview').popover({
+                trigger:'manual',
+                html:true,
+                title: "<strong>Preview</strong>"+$(closebtn)[0].outerHTML,
+                content: "There's no image",
+                placement:'bottom'
+            });
+            // Clear event
+            $('.image-preview-clear').click(function(){
+                $('.image-preview').attr("data-content","").popover('hide');
+                $('.image-preview-filename').val("");
+                $('.image-preview-clear').hide();
+                $('.image-preview-input input:file').val("");
+                $(".image-preview-input-title").text("Browse");
+            });
+            // Create the preview image
+            $(".image-preview-input input:file").change(function (){
+                var img = $('<img/>', {
+                    id: 'dynamic',
+                    width:250,
+                    height:200
+                });
+                var file = this.files[0];
+                var reader = new FileReader();
+                // Set preview image into the popover data-content
+                reader.onload = function (e) {
+                    $(".image-preview-input-title").text("Ganti");
+                    $(".image-preview-clear").show();
+                    $(".image-preview-filename").val(file.name);
+                    img.attr('src', e.target.result);
+                    $(".image-preview").attr("data-content",$(img)[0].outerHTML).popover("show");
+                }
+                reader.readAsDataURL(file);
+            });
+        });
+
+        $('#nextTabs a').click(function (e) {
+            e.preventDefault()
+            $(this).tab('show')
+        })
+    </script>
+    <style>
+        .container{
+            margin-top:20px;
+        }
+        .image-preview-input {
+            position: relative;
+            overflow: hidden;
+            margin: 0px;
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+        }
+        .image-preview-input input[type=file] {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+        .image-preview-input-title {
+            margin-left:2px;
+        }
+    </style>
+    <!-- // -->
+
+    <script th:src="@{/js/aplikasi/siswa.js}"></script>
+</section>
+</body>

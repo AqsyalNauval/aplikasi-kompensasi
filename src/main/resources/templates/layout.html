@@ -31,6 +31,8 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
 
+
+
 </head>
 <body>
 <div class="page home-page">
@@ -49,7 +51,7 @@
                     <!-- Navbar Header-->
                     <div class="navbar-header">
                         <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
-                        <div class="brand-text brand-big hidden-lg-down"><span>Monitoring </span><strong>Kompensasi Pegawai</strong></div>
+                        <div class="brand-text brand-big hidden-lg-down"><span>Monitoring &nbsp;</span><strong>Kompensasi Pegawai</strong></div>
                         <div class="brand-text brand-small"><strong>BD</strong></div></a>
                         <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
                     </div>
@@ -89,8 +91,10 @@
                 <li> <a th:href="@{/konfigurasi_gaji_karyawan/form}"><i class="icon-grid"></i>Konfigurasi Gaji Karyawan</a></li>
             </ul><span class="heading">Transaksi</span>
             <ul class="list-unstyled">
-                <li> <a th:href="@{/karyawan/list}"> <i class="icon-user"></i>Karyawan</a></li>
+                <li> <a th:href="@{/data_karyawan/list}"> <i class="icon-user"></i>Karyawan</a></li>
                 <li> <a th:href="@{/entry_kegiatan_karyawan/form}"> <i class="fa fa-newspaper-o"></i>Kegiatan Karyawan</a></li>
+                <li> <a th:href="@{/nilai_tunjangan_kinerja/list}"><i class="icon-grid"></i>Nilai Tunjangan Kinerja</a></li>
+                <li> <a th:href="@{/cuti/list}"> <i class="fa fa-newspaper-o"></i>Rekap Cuti</a></li>
                 <li> <a href="#"> <i class="fa fa-newspaper-o"></i>Cetak Slip Gaji</a></li>
             </ul>
         </nav>
@@ -125,7 +129,7 @@
     </div>
 </div>
 <!-- Javascript files-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script th:src="@{/js/tether.min.js}"></script>
 <script th:src="@{/js/bootstrap.min.js}"></script>
 <script th:src="@{/js/jquery.cookie.js}"> </script>
