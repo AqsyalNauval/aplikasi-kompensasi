@@ -7,8 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Gaji Pokok</title>
-
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -24,8 +23,12 @@
                             <h3 class="h4">Data Karyawan</h3>
                         </div>
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#biodata" data-toggle="tab">Biodata</a></li>
-                            <li><a href="#datakerja" data-toggle="tab">Data Kerja</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#biodata" data-toggle="tab">Biodata</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="#datakerja" data-toggle="tab">Data Kerja</a>
+                            </li>
                         </ul>
                         <div id="myTabContent" class="tab-content">
                             <div class="tab-pane active in" id="biodata">
@@ -50,11 +53,11 @@
                                                         <span class="input-group-btn">
 
                                                      <button type="button" class="btn btn-danger image-preview-clear" style="display:none;">
-                                                         <span class="glyphicon glyphicon-remove"></span> Hapus
+                                                         <i class="fa fa-window-close"></i>Hapus
                                                      </button>
 
                                             <div class="btn btn-default image-preview-input">
-                                                         <span class="glyphicon glyphicon-folder-open"></span>
+                                                         <i class="fa fa-file-image-o"></i>
                                                          <span class="image-preview-input-title">Pilih Gambar</span>
                                                          <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
                                             </div>
@@ -119,7 +122,7 @@
                                                         Kawin</label>
                                                     &nbsp;&nbsp;
                                                     <label class="radio-inline">
-                                                        <input id="op2_marital" name="op2_marital" value="op2_marital" type="radio">
+                                                        <input id="op2_marital" name="op1_marital" value="op2_marital" type="radio">
                                                         Tidak Kawin</label>
                                                 </div>
                                                 <label class="col-sm-1 form-control-label">Tarif PTKP</label>
@@ -139,7 +142,7 @@
                                                         N/A</label>
                                                     &nbsp;&nbsp;
                                                     <label class="radio-inline">
-                                                        <input id="op2_pengenal" name="op2_pengenal" value="op2_pengenal" type="radio">
+                                                        <input id="op2_pengenal" name="op1_pengenal" value="op2_pengenal" type="radio">
                                                         N/A</label>
                                                 </div>
                                                 <label class="col-sm-1 form-control-label">NPWP</label>
@@ -285,7 +288,7 @@
                                                         Pria</label>
                                                     &nbsp;&nbsp;
                                                     <label class="radio-inline">
-                                                        <input id="op2_statuskaryawan" name="op2_statuskaryawan" value="op2_statuskaryawan" type="radio">
+                                                        <input id="op2_statuskaryawan" name="op1_statuskaryawan" value="op2_statuskaryawan" type="radio">
                                                         Wanita</label>
                                                 </div>
                                                 <label class="col-sm-1 form-control-label">Mata Uang</label>
@@ -295,7 +298,7 @@
                                                         IDR</label>
                                                     &nbsp;&nbsp;
                                                     <label class="radio-inline">
-                                                        <input id="op2_uang" name="op2_uang" value="op2_uang" type="radio">
+                                                        <input id="op2_uang" name="op1_uang" value="op2_uang" type="radio">
                                                         USD</label>
                                                 </div>
                                             </div>
@@ -330,17 +333,17 @@
                                             <div class="row form-group has-danger">
                                                 <label class="col-sm-1 form-control-label">Departe men</label>
                                                 <div class="col-sm-5">
-                                                    <input type="text" id="departemen"
+                                                        <input type="text" id="departemen"
                                                            name="departemen"
-                                                           placeholder="Departmen" class="form-control">
-                                                    </input>
+                                                           placeholder="Departmen" data-toggle="modal" data-target="#modaldepartemen" class="form-control">
+                                                        </input>
                                                 </div>
                                                 <label class="col-sm-1 form-control-label">Jabatan</label>
                                                 <div class="col-sm-5">
                                                     <input type="text" id="jabatan"
                                                            name="jabatan"
-                                                           placeholder="Jabatan" class="form-control">
-                                                    </input>
+                                                           placeholder="Jabatan" data-toggle="modal" data-target="#modaljabatan" class="form-control">
+                                                        </input>
                                                 </div>
                                             </div>
                                             <hr>
@@ -372,7 +375,7 @@
                                                         Transfer</label>
                                                     &nbsp;&nbsp;
                                                     <label class="radio-inline">
-                                                        <input id="op2_pembayaran" name="op2_pembayaran" value="op2_pembayaran" type="radio">
+                                                        <input id="op2_pembayaran" name="op1_pembayaran" value="op2_pembayaran" type="radio">
                                                         Cash</label>
                                                 </div>
                                             </div>
@@ -414,6 +417,67 @@
     </div>
     </div>
     </div>
+
+    <!-- Modal Departemen -->
+    <div class="modal fade" id="modaldepartemen" tabindex="-1" role="dialog" aria-labelledby="modaldepartemen" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modaldepartemen2">Data Departemen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-header">
+                                <div class="input-group">
+                                    <input type="hidden" name="search_param" value="all" id="search_param2">
+                                    <input type="text" class="form-control" name="search" placeholder="Pencarian">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info" type="button"><i class="fa fa-search"></i></button>
+                                    </span>
+                                </div>
+                </div>
+                <div class="modal-body">
+                    Content
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" >Baru</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Jabatan -->
+    <div class="modal fade" id="modaljabatan" tabindex="-1" role="dialog" aria-labelledby="modaljabatan" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modaljabatan2">Data Jabatan</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-header">
+                                <div class="input-group">
+                                    <input type="hidden" name="search_param" value="all" id="search_param">
+                                    <input type="text" class="form-control" name="search" placeholder="Pencarian">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info" type="button"><i class="fa fa-search"></i></button>
+                                    </span>
+                    </div>
+                </div>
+                <div class="modal-body">
+Content
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" >Baru</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <script>
