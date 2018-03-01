@@ -10,13 +10,6 @@
 <section layout:fragment="content" class="tables">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4">
-                <div class="card">
-                    <a th:href="@{/jabatan_struktural/form}" class="btn btn-lg btn-primary">Tambah jabatan</a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-lg-10">
                 <div class="card">
                     <div class="card-header d-flex align-items-center">
@@ -27,23 +20,34 @@
                             <thead>
                             <tr>
                                 <th>No.</th>
+                                <th>Kode Jabatan</th>
                                 <th>Nama</th>
-                                <th>Nilai</th>
+                                <th>Keterangan</th>
                                 <th>&nbsp;</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Kewa</td>
-                                <td>40.000</td>
+                            <tr th:each="jabatan,row : ${daftarJabatanStruktural.content}">
+                                <td th:text="${(row.index + 1) + (daftarJabatanStruktural.number * daftarJabatanStruktural.size)}"></td>
+                                <td th:text="${jabatan.id}">Kewa</td>
+                                <td th:text="${jabatan.jabatan}">Kewa</td>
+                                <td th:text="${jabatan.keterangan}">Kewa</td>
                                 <td>
-                                    <a href="#" class="btn btn-xs">edit</a>
-                                    <a href="#" class="btn btn-xs">hapus</a>
+                                    <a href="#" th:href="@{/jabatan_struktural/form(id=${jabatan.id})}">edit</a> &nbsp; &nbsp;
+                                    <a href="#" th:href="@{/jabatan_struktural/delete(id=${jabatan.id})}">hapus</a>
                                 </td>
                             </tr>
                             </tbody>
                         </table>
+                        <a th:href="@{/jabatan_struktural/form}" class="btn btn-lg btn-primary">Tambah jabatan</a>
+                        <nav class="pull-right">
+                            <ul class="pagination" sd:pagination="full">
+                                <!-- Pagination created by SpringDataDialect, this content is just for mockup -->
+                                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                            </ul>
+                        </nav>
+
                     </div>
                 </div>
             </div>
