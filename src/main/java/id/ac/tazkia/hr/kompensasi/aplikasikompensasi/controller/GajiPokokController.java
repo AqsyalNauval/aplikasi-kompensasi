@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.Mapping;
 @Controller
 public class GajiPokokController {
 
-    @GetMapping("/gaji_pokok/list")
+    @GetMapping("/gajipokok/list")
     public void daftarGajiPokok(){
 
     }
-    @GetMapping("/gaji_pokok/form")
+    @GetMapping("/gajipokok/form")
     public void tampilkanForm(){
 
     }

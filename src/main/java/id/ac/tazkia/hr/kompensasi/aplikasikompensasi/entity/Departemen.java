@@ -9,6 +9,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 import java.math.BigInteger;
 
 @Entity
@@ -27,6 +28,7 @@ public class Departemen {
     private String nama;
 
     @Column(nullable = false)
+    @NotEmpty
     private String  keterangan;
 
     @Column(nullable = false)
