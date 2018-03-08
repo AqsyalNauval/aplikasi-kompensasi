@@ -11,27 +11,26 @@
 <body>
 
 <section layout:fragment="content" class="tables">
-    <div>
+    <div id="daftarSiswa">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-10">
                     <div class="card">
                         <div class="card-header d-flex align-items-center">
-                            <h3 class="h4">Input Departemen</h3>
+                            <h3 class="h4">Input Jabatan Struktural</h3>
                         </div>
                         <div class="card-body">
-                            <form class="form-horizontal" th:object="${departemen}" method="post">
+                            <form class="form-horizontal" th:object="${jabatanStruktural}" method="post">
                                 <div class="row form-group has-danger">
-                                    <label class="col-sm-3 form-control-label">Nama Departemen</label>
+                                    <label class="col-sm-3 form-control-label">Nama Jabatan</label>
                                     <div class="col-sm-9">
-                                        <input id="kode" type="text"
-                                               th:field="*{nama}"
-                                               name="nama"
-                                               placeholder="Nama Departemen" class="form-control">
-                                        <small class="invalid-feedback" th:if="${#fields.hasErrors('nama')}" th:errors="*{nama}">Nama Departemen harus diisi</small>
+                                        <input id="jabatan" type="text"
+                                               th:field="*{jabatan}"
+                                               name="jabatan"
+                                               placeholder="Nama Jabatan" class="form-control">
+                                        <small class="invalid-feedback" th:if="${#fields.hasErrors('jabatan')}" th:errors="*{jabatan}">Jabatan harus diisi</small>
                                     </div>
                                 </div>
-                                <br>
                                 <div class="row form-group has-danger">
                                     <label class="col-sm-3 form-control-label">Keterangan</label>
                                     <div class="col-sm-9">
@@ -39,12 +38,21 @@
                                                th:field="*{keterangan}"
                                                name="keterangan"
                                                placeholder="Keterangan" class="form-control">
-                                        <small class="invalid-feedback" th:if="${#fields.hasErrors('keterangan')}" th:errors="*{keterangan}">Keterangan harus diisi</small>
+                                    </div>
+                                </div>
+                                <div class="row form-group has-danger">
+                                    <label class="col-sm-3 form-control-label">Nilai Tunjangan</label>
+                                    <div class="col-sm-9">
+                                        <input id="nilai" type="text"
+                                               th:field="*{nilai}"
+                                               name="nilai"
+                                               placeholder="Nilai Tunjangan" class="form-control">
+                                        <small class="invalid-feedback" th:if="${#fields.hasErrors('nilai')}" th:errors="*{nilai}">Jabatan harus diisi</small>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-9 offset-sm-3">
-                                        <a th:href="@{/departemen/list}" class="btn btn-default" role="button">
+                                        <a th:href="@{/jabatanstruktural/list}" class="btn btn-default" role="button">
                                             <span aria-hidden="true"></span>Batal
                                         </a>
 
